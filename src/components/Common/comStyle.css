@@ -1,0 +1,11 @@
+logoText {
+    font-family: "Poppins", sans-serif;
+}
+
+.nav-link {
+    /* Existing styles */
+    border-right: 1px solid rgba(255, 255, 255, 0.8);
+    margin-left: 10px;
+    /* White border with opacity */
+}
+
