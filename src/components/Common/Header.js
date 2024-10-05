@@ -14,7 +14,7 @@ const Header = () => {
   const navigate = useNavigate();
 
   const handleNavLinkClick = () => {
-    setExpanded(false); // Close the menu
+    setExpanded(false);
   };
 
   const handleBrandClick = async () => {
