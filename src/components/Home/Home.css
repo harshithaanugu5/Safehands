@@ -12,3 +12,7 @@ h1{
         letter-spacing: 0.5px;
         font-family: "Poppins", sans-serif;
 }
+
+footer p{
+    color : white;
+}
