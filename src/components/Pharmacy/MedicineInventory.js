@@ -79,46 +79,54 @@ const MedicineInventory = () => {
     }
   };
 
+  const handleEditButtonClick = (medicine) => {
+    setSelectedMedicine(medicine);
+    setEditMedicineName(medicine.name);
+    setEditMedicineQuantity(medicine.quantity);
+    setEditMedicineCostPerUnit(medicine.costPerUnit);
+    setShowEditMedicineModal(true);
+  };
+
   return (
-    <Container className="mt-5 screenHandler">
+    <Container className="mt-5">
       <h2 className="text-center">Medicine Inventory</h2>
       {successMessage && <Alert variant="success">{successMessage}</Alert>}
       {errorMessage && <Alert variant="danger">{errorMessage}</Alert>}
       <Button variant="primary" onClick={() => setShowAddMedicineModal(true)}>
         Add Medicine
       </Button>
-      <div className="table-responsive">
-      <Table striped bordered hover className="mt-4">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Quantity</th>
-            <th>Cost Per Unit</th>
-            <th>Total Cost</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          {medicines.map((medicine, index) => (
-            <tr key={medicine.id}>
-              <td>{index + 1}</td>
-              <td>{medicine.name}</td>
-              <td>{medicine.quantity}</td>
-              <td>{medicine.costPerUnit}</td>
-              <td>{medicine.totalCost}</td>
-              <td>
-                <Button className="me-2" variant="primary" size="sm" disabled>
-                  Edit
-                </Button>
-                <Button variant="danger" size="sm" disabled>
-                  Delete
-                </Button>
-              </td>
+      <div className="table-responsive fullContainer">
+        <Table striped bordered hover className="mt-4">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Quantity</th>
+              <th>Cost Per Unit</th>
+              <th>Total Cost</th>
+              <th>Action</th>
             </tr>
-          ))}
-        </tbody>
-      </Table>
+          </thead>
+          <tbody>
+            {medicines.map((medicine, index) => (
+              <tr key={medicine.id}>
+                <td>{index + 1}</td>
+                <td>{medicine.name}</td>
+                <td>{medicine.quantity}</td>
+                <td>{medicine.costPerUnit}</td>
+                <td>{medicine.totalCost}</td>
+                <td>
+                  <Button className="me-2" variant="primary" size="sm" onClick={() => handleEditButtonClick(medicine)}>
+                    Edit
+                  </Button>
+                  <Button variant="danger" size="sm" onClick={() => handleDeleteMedicine(medicine.id)}>
+                    Delete
+                  </Button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </Table>
       </div>
       <Modal show={showAddMedicineModal} onHide={() => setShowAddMedicineModal(false)}>
         <Modal.Header closeButton>
@@ -178,8 +186,8 @@ const MedicineInventory = () => {
           </Button>
         </Modal.Footer>
       </Modal>
-      <br/>
-      <br/>
+      <br />
+      <br />
     </Container>
   );
 };

@@ -19,6 +19,10 @@ import MedicalHistory from "./components/Appointments/MedicalHistory";
 import MedicineInventory from "./components/Pharmacy/MedicineInventory";
 import PharmacyDashboard from "./components/Pharmacy/PharmacyDashboard";
 import PredictDisease from "./components/PredictionAI/PredictDisease";
+import PatientSearch from "./components/Pharmacy/PatientSearch";
+import Cart from "./components/Pharmacy/Cart";
+import ManageUsers from "./components/Admin/ManageUsers";
+import Statistics from "./components/Admin/Statistics";
 
 
 function App() {
@@ -41,6 +45,10 @@ function App() {
           <Route path="/pharmacy-dashboard" element={<PrivateRoute><PharmacyDashboard /></PrivateRoute>} />
           <Route path="/medicine-inventory" element={<PrivateRoute><MedicineInventory /></PrivateRoute>} />
           <Route path="/predict-disease" element={<PrivateRoute><PredictDisease /></PrivateRoute>} />
+          <Route path="/patient-search" element={<PrivateRoute><PatientSearch /></PrivateRoute>} />
+          <Route path="/cart" element={<PrivateRoute><Cart /></PrivateRoute>} />
+          <Route path="/manage-users" element={<PrivateRoute><ManageUsers /></PrivateRoute>} />
+          <Route path="/statistics" element={<PrivateRoute><Statistics /></PrivateRoute>} />
         </Routes>
       </Container>
       <Footer />

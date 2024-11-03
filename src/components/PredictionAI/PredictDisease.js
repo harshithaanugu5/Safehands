@@ -86,12 +86,11 @@ function PredictDisease() {
         <h3 className="text-center mb-4">Heart Disease Prediction Form</h3>
 
         <Form.Group controlId="age" className="mb-3">
-          <Form.Label>Age</Form.Label>
           <OverlayTrigger
             placement="right"
             overlay={<Tooltip>Your age in years. Heart disease risk increases with age.</Tooltip>}
           >
-            <Button variant="link">?</Button>
+            <Form.Label>Age<span className="mandate">*</span></Form.Label>
           </OverlayTrigger>
           <Form.Control
             type="number"
@@ -107,12 +106,11 @@ function PredictDisease() {
         </Form.Group>
 
         <Form.Group controlId="sex" className="mb-3">
-          <Form.Label>Sex</Form.Label>
           <OverlayTrigger
             placement="right"
             overlay={<Tooltip>Gender: Male or Female. Risk factors may differ between genders.</Tooltip>}
           >
-            <Button variant="link">?</Button>
+            <Form.Label>Sex<span className="mandate">*</span></Form.Label>
           </OverlayTrigger>
           <Form.Control
             as="select"
@@ -130,15 +128,12 @@ function PredictDisease() {
         </Form.Group>
 
         <Form.Group controlId="cp" className="mb-3">
-          <Form.Label>
-            Chest Pain Type
-            <OverlayTrigger
-              placement="right"
-              overlay={<Tooltip>Types of chest pain: 0 - Typical Angina (chest pain related to heart problems), 1 - Atypical Angina, 2 - Non-anginal Pain, 3 - Asymptomatic (no pain).</Tooltip>}
-            >
-              <Button variant="link">?</Button>
-            </OverlayTrigger>
-          </Form.Label>
+          <OverlayTrigger
+            placement="right"
+            overlay={<Tooltip>Types of chest pain: 0 - Typical Angina, 1 - Atypical Angina, 2 - Non-anginal Pain, 3 - Asymptomatic.</Tooltip>}
+          >
+            <Form.Label>Chest Pain Type<span className="mandate">*</span></Form.Label>
+          </OverlayTrigger>
           <Form.Control
             as="select"
             name="cp"
@@ -157,12 +152,11 @@ function PredictDisease() {
         </Form.Group>
 
         <Form.Group controlId="trestbps" className="mb-3">
-          <Form.Label>Resting Blood Pressure</Form.Label>
           <OverlayTrigger
             placement="right"
-            overlay={<Tooltip>Blood pressure at rest, measured in mmHg. Normal range is typically around 120/80 mmHg.</Tooltip>}
+            overlay={<Tooltip>Blood pressure at rest, measured in mmHg. Normal range is around 120/80 mmHg.</Tooltip>}
           >
-            <Button variant="link">?</Button>
+            <Form.Label>Resting Blood Pressure<span className="mandate">*</span></Form.Label>
           </OverlayTrigger>
           <Form.Control
             type="number"
@@ -178,12 +172,11 @@ function PredictDisease() {
         </Form.Group>
 
         <Form.Group controlId="chol" className="mb-3">
-          <Form.Label>Serum Cholesterol</Form.Label>
           <OverlayTrigger
             placement="right"
             overlay={<Tooltip>Cholesterol level in blood, measured in mg/dl. High levels can increase heart disease risk.</Tooltip>}
           >
-            <Button variant="link">?</Button>
+            <Form.Label>Serum Cholesterol<span className="mandate">*</span></Form.Label>
           </OverlayTrigger>
           <Form.Control
             type="number"
@@ -199,12 +192,11 @@ function PredictDisease() {
         </Form.Group>
 
         <Form.Group controlId="fbs" className="mb-3">
-          <Form.Label>Fasting Blood Sugar</Form.Label>
           <OverlayTrigger
             placement="right"
             overlay={<Tooltip>Blood sugar level after fasting. Higher levels can indicate diabetes risk.</Tooltip>}
           >
-            <Button variant="link">?</Button>
+            <Form.Label>Fasting Blood Sugar<span className="mandate">*</span></Form.Label>
           </OverlayTrigger>
           <Form.Control
             as="select"
@@ -222,12 +214,11 @@ function PredictDisease() {
         </Form.Group>
 
         <Form.Group controlId="restecg" className="mb-3">
-          <Form.Label>Resting ECG Results</Form.Label>
           <OverlayTrigger
             placement="right"
-            overlay={<Tooltip>Results from an ECG (electrocardiogram) test at rest. Abnormal results can indicate heart issues.</Tooltip>}
+            overlay={<Tooltip>Results from an ECG test at rest. Abnormal results can indicate heart issues.</Tooltip>}
           >
-            <Button variant="link">?</Button>
+            <Form.Label>Resting ECG Results<span className="mandate">*</span></Form.Label>
           </OverlayTrigger>
           <Form.Control
             as="select"
@@ -246,12 +237,11 @@ function PredictDisease() {
         </Form.Group>
 
         <Form.Group controlId="thalach" className="mb-3">
-          <Form.Label>Max Heart Rate</Form.Label>
           <OverlayTrigger
             placement="right"
             overlay={<Tooltip>Maximum heart rate achieved during exercise. Higher rates can indicate better heart health.</Tooltip>}
           >
-            <Button variant="link">?</Button>
+            <Form.Label>Max Heart Rate<span className="mandate">*</span></Form.Label>
           </OverlayTrigger>
           <Form.Control
             type="number"
@@ -267,12 +257,11 @@ function PredictDisease() {
         </Form.Group>
 
         <Form.Group controlId="exang" className="mb-3">
-          <Form.Label>Exercise Induced Angina</Form.Label>
           <OverlayTrigger
             placement="right"
             overlay={<Tooltip>Indicates if chest pain occurs during exercise. A sign of heart disease risk.</Tooltip>}
           >
-            <Button variant="link">?</Button>
+            <Form.Label>Exercise Induced Angina<span className="mandate">*</span></Form.Label>
           </OverlayTrigger>
           <Form.Control
             as="select"
@@ -290,15 +279,13 @@ function PredictDisease() {
         </Form.Group>
 
         <Form.Group controlId="oldpeak" className="mb-3">
-          <Form.Label>Oldpeak</Form.Label>
           <OverlayTrigger
             placement="right"
             overlay={<Tooltip>ST depression induced by exercise relative to rest. Higher values indicate more severe heart disease.</Tooltip>}
           >
-            <Button variant="link">?</Button>
+            <Form.Label>Oldpeak<span className="mandate">*</span></Form.Label>
           </OverlayTrigger>
           <Form.Control
-            type="number"
             name="oldpeak"
             value={formData.oldpeak}
             onChange={handleChange}
@@ -311,12 +298,11 @@ function PredictDisease() {
         </Form.Group>
 
         <Form.Group controlId="slope" className="mb-3">
-          <Form.Label>Slope of ST Segment</Form.Label>
           <OverlayTrigger
             placement="right"
             overlay={<Tooltip>Represents the slope of the ST segment during exercise. Indicates heart condition severity.</Tooltip>}
           >
-            <Button variant="link">?</Button>
+            <Form.Label>Slope of ST Segment<span className="mandate">*</span></Form.Label>
           </OverlayTrigger>
           <Form.Control
             as="select"
@@ -335,12 +321,11 @@ function PredictDisease() {
         </Form.Group>
 
         <Form.Group controlId="ca" className="mb-3">
-          <Form.Label>Number of Major Vessels</Form.Label>
           <OverlayTrigger
             placement="right"
             overlay={<Tooltip>Number of major blood vessels (0-3) colored by fluoroscopy. More vessels may indicate higher risk.</Tooltip>}
           >
-            <Button variant="link">?</Button>
+            <Form.Label>Number of Major Vessels<span className="mandate">*</span></Form.Label>
           </OverlayTrigger>
           <Form.Control
             type="number"
@@ -356,12 +341,11 @@ function PredictDisease() {
         </Form.Group>
 
         <Form.Group controlId="thal" className="mb-3">
-          <Form.Label>Thalassemia</Form.Label>
           <OverlayTrigger
             placement="right"
             overlay={<Tooltip>Types of thalassemia: 0 - Normal, 1 - Fixed defect, 2 - Reversible defect.</Tooltip>}
           >
-            <Button variant="link">?</Button>
+            <Form.Label>Thalassemia<span className="mandate">*</span></Form.Label>
           </OverlayTrigger>
           <Form.Control
             as="select"
