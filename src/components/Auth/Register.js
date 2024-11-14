@@ -72,8 +72,9 @@ const Register = () => {
       {error && <Alert variant="danger">{error}</Alert>}
       <Form onSubmit={handleSubmit}>
         <Form.Group id="displayName" className="mb-3">
-          <Form.Label><strong>Full Name</strong></Form.Label>
+          <Form.Label htmlFor="displayName"><strong>Full Name</strong></Form.Label>
           <Form.Control
+            id="displayName"
             type="text"
             required
             placeholder="Enter your full name"
@@ -82,8 +83,9 @@ const Register = () => {
           />
         </Form.Group>
         <Form.Group id="email" className="mb-3">
-          <Form.Label><strong>Email Address</strong></Form.Label>
+          <Form.Label htmlFor="email"><strong>Email Address</strong></Form.Label>
           <Form.Control
+            id="email"
             type="email"
             required
             placeholder="Enter your email"
@@ -92,8 +94,9 @@ const Register = () => {
           />
         </Form.Group>
         <Form.Group id="password" className="mb-3">
-          <Form.Label><strong>Password</strong></Form.Label>
+          <Form.Label htmlFor="password"><strong>Password</strong></Form.Label>
           <Form.Control
+            id="password"
             type="password"
             required
             placeholder="Enter a password"
@@ -102,8 +105,9 @@ const Register = () => {
           />
         </Form.Group>
         <Form.Group id="confirmPassword" className="mb-3">
-          <Form.Label><strong>Confirm Password</strong></Form.Label>
+          <Form.Label htmlFor="confirmPassword"><strong>Confirm Password</strong></Form.Label>
           <Form.Control
+            id="confirmPassword"
             type="password"
             required
             placeholder="Confirm your password"
@@ -112,19 +116,20 @@ const Register = () => {
           />
         </Form.Group>
         <Form.Group id="dateOfBirth" className="mb-3">
-          <Form.Label><strong>Date of Birth</strong></Form.Label>
-          <Form.Control type="date" value={dateOfBirth} onChange={(e) => setDateOfBirth(e.target.value)} />
+          <Form.Label htmlFor="dateOfBirth"><strong>Date of Birth</strong></Form.Label>
+          <Form.Control id="dateOfBirth" type="date" value={dateOfBirth} onChange={(e) => setDateOfBirth(e.target.value)} />
         </Form.Group>
         <Form.Group id="gender" className="mb-3">
-          <Form.Label><strong>Gender</strong></Form.Label>
-          <Form.Select value={gender} onChange={(e) => setGender(e.target.value)}>
+          <Form.Label htmlFor="gender"><strong>Gender</strong></Form.Label>
+          <Form.Select id="gender" value={gender} onChange={(e) => setGender(e.target.value)}>
             <option value="male">Male</option>
             <option value="female">Female</option>
           </Form.Select>
         </Form.Group>
         <Form.Group id="place" className="mb-3">
-          <Form.Label><strong>Place</strong></Form.Label>
+          <Form.Label htmlFor="place"><strong>Place</strong></Form.Label>
           <Form.Control
+            id="place"
             type="text"
             required
             placeholder="Enter your place"
@@ -133,8 +138,8 @@ const Register = () => {
           />
         </Form.Group>
         <Form.Group id="role" className="mb-3">
-          <Form.Label><strong>Role</strong></Form.Label>
-          <Form.Select value={role} onChange={(e) => setRole(e.target.value)}>
+          <Form.Label htmlFor="role"><strong>Role</strong></Form.Label>
+          <Form.Select id="role" value={role} onChange={(e) => setRole(e.target.value)}>
             <option value="patient">Patient</option>
             <option value="doctor">Doctor</option>
             <option value="pharmacist">Pharmacist</option>

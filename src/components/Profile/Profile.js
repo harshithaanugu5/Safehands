@@ -72,19 +72,19 @@ const Profile = () => {
                     <div className="d-flex flex-wrap rounded-3 p-2 mb-2 bg-body-tertiary">
                       <div className="me-4 mb-3">
                         <p className="small text-muted mb-1"><strong>Age</strong></p>
-                        <p className="mb-0">{calculateAge(userData?.dateOfBirth)}</p>
+                        <p className="mb-0" style={{color:'black'}}>{calculateAge(userData?.dateOfBirth)}</p>
                       </div>
                       <div className="me-4 mb-3">
                         <p className="small text-muted mb-1"><strong>Gender</strong></p>
-                        <p className="mb-0">{userData?.gender || "Gender"}</p>
+                        <p className="mb-0" style={{color:'black'}}>{userData?.gender || "Gender"}</p>
                       </div>
                       <div className="me-4 mb-3">
                         <p className="small text-muted mb-1"><strong>Place</strong></p>
-                        <p className="mb-0">{userData?.place || "Place"}</p>
+                        <p className="mb-0" style={{color:'black'}}>{userData?.place || "Place"}</p>
                       </div>
                       <div className="mb-3">
                         <p className="small text-muted mb-1"><strong>Date of Birth</strong></p>
-                        <p className="mb-0">{userData?.dateOfBirth || "N/A"}</p>
+                        <p className="mb-0" style={{color:'black'}}>{userData?.dateOfBirth || "N/A"}</p>
                       </div>
                     </div>
                     <div className="d-flex pt-1">

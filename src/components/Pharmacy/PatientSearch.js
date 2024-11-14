@@ -73,9 +73,10 @@ const PatientSearch = () => {
     <Container className="mt-5 fullContainer">
       <h2 className="text-center">Patient Search</h2>
       <Form>
-        <Form.Group className="mb-3">
-          <Form.Label>Patient Name</Form.Label>
+        <Form.Group id="patient" className="mb-3">
+          <Form.Label htmlFor="patient">Patient Name</Form.Label>
           <Form.Control
+            id="patient"
             type="text"
             placeholder="Enter patient name"
             value={searchTerm}

@@ -54,22 +54,22 @@ const Header = () => {
           <Nav className="ms-auto">
             {currentUser ? (
               <>
-                <Nav.Link as={Link} to="/profile" className="btn btn-dark d-flex align-items-center" onClick={handleNavLinkClick}>
+                <Nav.Link as={Link} to="/profile" className="btn btn-dark d-flex align-items-center" onClick={handleNavLinkClick} style={{color: 'white'}}>
                   <FontAwesomeIcon icon={faUser} style={{ marginRight: '10px' }} />
                   Profile
                 </Nav.Link>
-                <Nav.Link onClick={() => { logout(); handleNavLinkClick(); }} className="btn btn-dark d-flex align-items-center">
+                <Nav.Link onClick={() => { logout(); handleNavLinkClick(); }} className="btn btn-dark d-flex align-items-center" style={{color: 'white'}}>
                   <FontAwesomeIcon icon={faSignOut} style={{ marginRight: '10px' }} />
                   Logout
                 </Nav.Link>
               </>
             ) : (
               <>
-                <Nav.Link as={Link} to="/login" className="btn btn-dark d-flex align-items-center" onClick={handleNavLinkClick}>
+                <Nav.Link as={Link} to="/login" className="btn btn-dark d-flex align-items-center" onClick={handleNavLinkClick} style={{color: 'white'}}>
                   <FontAwesomeIcon icon={faSignIn} style={{ marginRight: '10px' }} />
                   Login
                 </Nav.Link>
-                <Nav.Link as={Link} to="/register" className="btn btn-dark d-flex align-items-center" onClick={handleNavLinkClick}>
+                <Nav.Link as={Link} to="/register" className="btn btn-dark d-flex align-items-center" onClick={handleNavLinkClick} style={{color: 'white'}}>
                   <FontAwesomeIcon icon={faUserPlus} style={{ marginRight: '10px' }} />
                   Register
                 </Nav.Link>

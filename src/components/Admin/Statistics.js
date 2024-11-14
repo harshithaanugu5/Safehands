@@ -125,17 +125,17 @@ const Statistics = () => {
       <Row>
         <Col md={6} className="mt-5">
           <h2 className="text-center">Appointments Per Day</h2>
-          <Bar data={barData} options={barOptions}/>
+          <Bar data={barData} options={barOptions} aria-label="A bar chart showing the number of appointments per day"/>
         </Col>
         <Col md={6} className="mt-5">
           <h2 className="text-center">Pharmacy Sales</h2>
-          <Line data={lineData} />
+          <Line data={lineData} aria-label="A line chart showing pharmacy sales over time"/>
         </Col>
       </Row>
       <Row className="mt-5 justify-content-center">
       <Col md={4} className="d-flex flex-column align-items-center">
         <h2 className="text-center mb-4">User Distribution</h2>
-        <Pie data={pieData} />
+        <Pie data={pieData} aria-label="A pie chart showing the distribution of users by role, including doctors, patients, and pharmacists"/>
       </Col>
     </Row>
     </Container>
